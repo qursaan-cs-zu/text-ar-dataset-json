@@ -13,7 +13,7 @@ def iterate_files(directory):
                     process_xml_file(xml_file, root, count) 
                     count += 1  
                 except Exception as e:
-                    print(f"Error processing file '{xml_file}': {str(e)}")
+                    #print(f"Error processing file '{xml_file}': {str(e)}")
                     #with open("./Error.eor", "a") as file:
                     #    file.write(f"Error processing file '{xml_file}': {str(e)}")
                     #    file.write("\n")
@@ -37,8 +37,8 @@ def process_xml_file(xml_file, root_dir, count):
     with open("/content/text-ar-dataset-json/jsons/ant.jsonl", "a", encoding="utf-8") as json_file:
         json_file.write(json.dumps(data, ensure_ascii=False))  
         json_file.write("\n")
-    print(f"Processed file: {xml_file}")
-    print()
+    #print(f"Processed file: {xml_file}")
+    #print()
 
 
 directory_path = "/content/text-ar-dataset-json/ant-code/data"
