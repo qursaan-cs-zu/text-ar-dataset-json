@@ -37,7 +37,7 @@ def organize_files(source_directory):
                         "category": category,
                     }
 
-                    with open("essex.jsonl", "a", encoding="utf-8") as json_file:
+                    with open("/content/text-ar-dataset-json/jsons/essex.jsonl", "a", encoding="utf-8") as json_file:
                         json_file.write(json.dumps(data, ensure_ascii=False))
                         json_file.write("\n")
 
@@ -45,9 +45,9 @@ def organize_files(source_directory):
                 cnt = 0
 
 counter = 0
-current_directory = "./data"
+current_directory = "/content/text-ar-dataset-json/essex-code/data"
 
-with open("essex.jsonl", "w") as file:
+with open("/content/text-ar-dataset-json/jsons/essex.jsonl", "w") as file:
     file.truncate(0)
 
 for folder_name in sorted(os.listdir(current_directory)):
